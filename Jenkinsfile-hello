@@ -1,7 +1,9 @@
 pipeline {
     agent { 
-        label 'master'
-        customWorkspace 'workspace/OCI_precon_publish/'
+        label {
+            label 'master'
+            customWorkspace 'workspace/OCI_precon_publish/'
+        }
     }
     stages {
         stage('build') {
